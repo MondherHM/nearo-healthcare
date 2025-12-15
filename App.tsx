@@ -122,11 +122,17 @@ const App: React.FC = () => {
           <div className={`relative z-10 pb-8 bg-white sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32 flex flex-col justify-center min-h-[60vh] px-4 sm:px-6 lg:px-8`}>
             <main className="mt-10 mx-auto max-w-7xl sm:mt-12 md:mt-16 lg:mt-20 xl:mt-28">
               <div className="sm:text-center lg:text-left rtl:lg:text-right">
-                {/* Zone 4 Requirement: Specific Texts */}
-                <h1 className="tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl flex flex-col gap-2">
-                  <span className="block text-[24px] md:text-5xl text-black">{t.hero_title_1}</span>
-                  <span className="block text-[24px] md:text-5xl text-nearo-green">{t.hero_title_2}</span>
+                
+                {/* Zone 4 Requirements: Black and 24, Green and 24 */}
+                <h1 className="tracking-tight font-extrabold text-gray-900 flex flex-col gap-1">
+                  <span className="block text-[24px] font-bold text-black leading-tight">
+                    {t.hero_title_1}
+                  </span>
+                  <span className="block text-[24px] font-bold text-nearo-green leading-tight">
+                    {t.hero_title_2}
+                  </span>
                 </h1>
+                
                 <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
                   {t.hero_desc}
                 </p>
@@ -139,7 +145,7 @@ const App: React.FC = () => {
                         <Search className="h-5 w-5 text-gray-400" />
                         <input
                           type="text"
-                          className="w-full border-none focus:ring-0 text-gray-700 placeholder-gray-400 px-3 bg-transparent"
+                          className="w-full border-none focus:ring-0 text-gray-700 placeholder-gray-400 px-3 bg-transparent outline-none"
                           placeholder={t.search_placeholder}
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
